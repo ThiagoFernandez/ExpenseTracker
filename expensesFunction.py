@@ -1,6 +1,16 @@
-import fileSettings
+import fileSettings, datetime
 
 def addWhere(user, where, dict1, dict2):
+    nameList = []
+    totalExpenses = list(dict2["users"][user].keys())
+    for expense in totalExpenses:
+        nameList.append(list(dict2["users"][user][totalExpenses[expense]]["name"]))
+    while True:
+        newName = input("Add a name for the expense: ")
+        if newName in nameList:
+            print(f"{newName} is already a used it | Try again")
+        else:
+            break
     subCategoryList = list(dict1["users"][user]["categories"][where].keys())
     while True:
         #i arranca dsd 0 por eso el +1
@@ -37,16 +47,19 @@ def addWhere(user, where, dict1, dict2):
                                 break
                         except ValueError:
                             print("The quantity must be a number | Try again")
+                    time = datetime.datetime.now()
                     idList = list(dict2["users"][user].keys())
                     newestId = len(idList)
                     newId = newestId+1
                     dict2["users"][user][newId]= {
+                        "name":newName,
                         "category": where,
                         "subCategory": subCategory,
                         "item": item,
                         "brand":brand,
                         "unitPrice": price,
-                        "quantity": quantity
+                        "quantity": quantity,
+                        "time": time
                     }
                     brandList = []
                     brandList.append(brand)
@@ -97,16 +110,19 @@ def addWhere(user, where, dict1, dict2):
                                 break
                         except ValueError:
                             print("The quantity must be a number | Try again")
+                    time = datetime.datetime.now()
                     idList = list(dict2["users"][user].keys())
                     newestId = len(idList)
                     newId = newestId+1
                     dict2["users"][user][newId]= {
+                        "name": newName,
                         "category": where,
                         "subCategory": subCategory,
                         "item": item,
                         "brand":brand,
                         "unitPrice": price,
-                        "quantity": quantity
+                        "quantity": quantity,
+                        "time": time
                     }
                     brandList = []
                     brandList.append(brand)
@@ -156,16 +172,19 @@ def addWhere(user, where, dict1, dict2):
                                 break
                         except ValueError:
                             print("The quantity must be a number | Try again")
+                    time = datetime.datetime.now()
                     idList = list(dict2["users"][user].keys())
                     newestId = len(idList)
                     newId = newestId+1
                     dict2["users"][user][newId]= {
+                        "name": newName,
                         "category": where,
                         "subCategory": subCategory,
                         "item": item,
                         "brand":brand,
                         "unitPrice": price,
-                        "quantity": quantity
+                        "quantity": quantity,
+                        "time": time
                     }
                     brandList = []
                     brandList.append(brand)
@@ -192,7 +211,7 @@ def addWhere(user, where, dict1, dict2):
             print("The option must be a number | Try again")
     while True:
         try:
-            price = int(input("Write the unit item price"))
+            price = int(input("Write the unit item price: "))
             if price <0:
                 print("The price cannot be below 0 | Try again")
             else:
@@ -200,17 +219,20 @@ def addWhere(user, where, dict1, dict2):
         except ValueError:
             print("The price must be a number | Try again")
     
+    time = datetime.datetime.now()
     idList = list(dict2["users"][user].keys())
     newestId = len(idList)
     newId = newestId+1
 
     dict2["users"][user][newId] = {
+        "name": newName,
         "category": where,
         "subCategory": subCategory,
         "item": item,
         "brand": brand,
         "quantity": quantity,
-        "unitPrice": price
+        "unitPrice": price,
+        "time": time
     }
     fileSettings.saveFile("expensesFile", dict2)
     return None
