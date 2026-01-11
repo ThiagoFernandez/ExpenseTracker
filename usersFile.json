@@ -1,0 +1,99 @@
+{
+    "users": {
+        "thiago": {
+            "password": "e941e808846e10729bc2f5f87fb6c0fc6ae4e734a248b904dadc5fd0bbfd45c2",
+            "email": "thiagofprocacci@gmail.com",
+            "notifications": true,
+            "monthlyIncome": 1000000,
+            "resetDay": 1,
+            "categories": {
+                "routine": {
+                    "groceries": {
+                        "probando": {
+                            "brands": [
+                                "ando"
+                            ]
+                        }
+                    },
+                    "fruits": {},
+                    "vegetables": {},
+                    "meat": {},
+                    "dairy": {},
+                    "bakery": {
+                        "brands": [
+                            "La buenos aires"
+                        ]
+                    },
+                    "beverages": {},
+                    "snacks": {
+                        "potato": {
+                            "brands": [
+                                "lays",
+                                "pringles",
+                                "quento"
+                            ]
+                        }
+                    },
+                    "frozen_food": {},
+                    "household": {},
+                    "cleaning": {},
+                    "personal_care": {},
+                    "hygiene": {},
+                    "pharmacy": {},
+                    "pets": {},
+                    "nuevaSub": {
+                        "nuevoItem": {
+                            "brands": [
+                                "nuevaMarca"
+                            ]
+                        }
+                    }
+                },
+                "varietySeeking": {
+                    "restaurants": {},
+                    "take_away": {},
+                    "coffee": {},
+                    "fast_food": {},
+                    "clothing": {},
+                    "shoes": {},
+                    "accessories": {},
+                    "electronics_small": {},
+                    "subscriptions": {},
+                    "entertainment": {},
+                    "streaming": {},
+                    "apps": {},
+                    "games": {}
+                },
+                "complex": {
+                    "electronics": {},
+                    "computer_hardware": {},
+                    "software": {},
+                    "education": {},
+                    "courses": {},
+                    "certifications": {},
+                    "furniture": {},
+                    "appliances": {},
+                    "vehicle": {},
+                    "health": {},
+                    "insurance": {},
+                    "travel": {},
+                    "real_estate": {}
+                },
+                "forced": {
+                    "rent": {},
+                    "utilities": {},
+                    "electricity": {},
+                    "water": {},
+                    "gas": {},
+                    "internet": {},
+                    "mobile_phone": {},
+                    "transport": {},
+                    "fuel": {},
+                    "taxes": {},
+                    "fees": {},
+                    "medical": {}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "users": {
+        "thiago": {
+            "1": {
+                "category": "routine",
+                "subCategory": "nuevaSub",
+                "item": "nuevoItem",
+                "brand": "nuevaMarca",
+                "unitPrice": 100,
+                "quantity": 1
+            },
+            "2": {
+                "category": "routine",
+                "subCategory": "groceries",
+                "item": "probando",
+                "brand": "ando",
+                "unitPrice": 10,
+                "quantity": 2
+            },
+            "3": {
+                "category": "routine",
+                "subCategory": "bakery",
+                "item": "medialuna",
+                "brand": "La buenos aires",
+                "unitPrice": 1000,
+                "quantity": 6
+            },
+            "4": {
+                "category": "routine",
+                "subCategory": "bakery",
+                "item": "medialuna",
+                "brand": "La buenos aires",
+                "unitPrice": 20,
+                "quantity": 2
+            }
+        }
+    }
+}
